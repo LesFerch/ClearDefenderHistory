@@ -1,6 +1,7 @@
 # ClearDefenderHistory
 
-Written by: [tenforums member: garlin](https://www.tenforums.com/members/garlin.html)
+### Written by: [tenforums member: garlin](https://www.tenforums.com/members/garlin.html)
+### [Click here to see the original post](https://www.tenforums.com/antivirus-firewalls-system-security/133451-clear-windows-security-center-defender-protection-history-post2561559.html#post2561559)
 
 [![image](https://user-images.githubusercontent.com/79026235/152910441-59ba653c-5607-4f59-90c0-bc2851bf2688.png)Download the zip file](https://github.com/LesFerch/ClearDefenderHistory/archive/refs/heads/main.zip)
 
