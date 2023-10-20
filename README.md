@@ -18,7 +18,7 @@ For others, it fixes an issue where Defender continues to detect a file as a vir
 2. Extract **ClearDefenderHistory.bat**.
 3. Right-click **ClearDefenderHistory.bat**, select Properties, check **Unblock**, and click **OK**.
 4. Double-click  **ClearDefenderHistory.bat** to run it. You will get a UAC prompt, unless you are already running it from an elevated console.
-5. If you skipped step 3, then on first run, in the SmartScreen window, click **More info** and then **Run anyway**.
+5. If you skipped step 3, then just click **Run** when you get the security warning.
 
 **Note**: Some antivirus software may falsely detect the download as a virus. This can happen anytime you download a new script and may require extra steps to whitelist the file.
 
