@@ -15,7 +15,7 @@ Some people may want to run this script just to clean things up and not see old 
 
 For others, it fixes an issue where Defender continues to detect a file as a virus even after the Defender team has updated the definitions so that the "detection has been removed".
 
-# How to Download and Run
+## How to Download and Run
 
 1. Download the zip file using the link above.
 2. Extract **ClearDefenderHistory.bat**.
