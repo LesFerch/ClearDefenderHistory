@@ -23,7 +23,8 @@ $TaskName = 'Clear Defender Protection History'
 $SchedulerPath = '\Microsoft\Windows\PowerShell\ScheduledJobs'
 Register-ScheduledJob -Name $TaskName -ScriptBlock $ScriptBlock | Out-Null
 
-$Principal = New-ScheduledTaskPrincipal -UserId "$env:COMPUTERNAME\Administrator"
+$adminAccount = Get-LocalUser | Where-Object {$_.SID -like "*-500"} | Select-Object -ExpandProperty Name
+$Principal = New-ScheduledTaskPrincipal -UserId "$env:COMPUTERNAME\$adminAccount"
 Set-ScheduledTask -TaskPath $SchedulerPath -TaskName $TaskName -Principal $Principal | Out-Null
 
 $Service = New-Object -ComObject 'Schedule.Service'
