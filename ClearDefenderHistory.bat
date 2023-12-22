@@ -21,6 +21,7 @@ $ScriptBlock = {
 
 $TaskName = 'Clear Defender Protection History'
 $SchedulerPath = '\Microsoft\Windows\PowerShell\ScheduledJobs'
+Unregister-ScheduledJob $TaskName -Confirm:$false 2>&1 | Out-Null
 Register-ScheduledJob -Name $TaskName -ScriptBlock $ScriptBlock | Out-Null
 
 $adminAccount = Get-LocalUser | Where-Object {$_.SID -like "*-500"} | Select-Object -ExpandProperty Name
