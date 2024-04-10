@@ -3,7 +3,7 @@
 ### Written by: [tenforums member: garlin](https://www.tenforums.com/members/garlin.html)
 ### [Click here to see the original post](https://www.tenforums.com/antivirus-firewalls-system-security/133451-clear-windows-security-center-defender-protection-history-post2561559.html#post2561559)
 
-[![image](https://user-images.githubusercontent.com/79026235/152910441-59ba653c-5607-4f59-90c0-bc2851bf2688.png)Download the zip file](https://github.com/LesFerch/ClearDefenderHistory/archive/refs/heads/main.zip)
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/ClearDefenderHistory/archive/refs/heads/main.zip)
 
 ## Clear Windows Defender History Files
 
@@ -27,4 +27,4 @@ For others, it fixes an issue where Defender continues to detect a file as a vir
 
 \
 \
-[![image](https://user-images.githubusercontent.com/79026235/153264696-8ec747dd-37ec-4fc1-89a1-3d6ea3259a95.png)](https://github.com/LesFerch/ClearDefenderHistory)
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/ClearDefenderHistory)
