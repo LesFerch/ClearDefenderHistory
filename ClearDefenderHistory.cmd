@@ -14,5 +14,5 @@ if (Test-Path $file) {
     $null = New-ItemProperty -Path $keyPath -Name $valueName -Value $valueData -PropertyType String -Force
 
     $choice = (Read-Host "`nA restart is required to clear the Protection history. Enter y to restart now").ToLower()
-    if ($choice -eq "y") { Restart-Computer -Force }
+    if ($choice -eq "y") { Restart-Computer }
 }
