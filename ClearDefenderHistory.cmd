@@ -8,11 +8,8 @@ $folder = 'C:\ProgramData\Microsoft\Windows Defender\Scans\History\Service'
 $file = "$folder\Detections.log"
 
 if (Test-Path $file) {
-    $keyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce"
-    $valueName = "DWDH"
-    $valueData = "cmd /c rd /s /q ""$folder"""
-    $null = New-ItemProperty -Path $keyPath -Name $valueName -Value $valueData -PropertyType String -Force
+  schtasks /create /f /sc onStart /ru 'NT AUTHORITY\SYSTEM' /tn DWDH /tr "cmd.exe /c rd /s /q \`"$folder\`" & schtasks /delete /f /tn DWDH"
 
-    $choice = (Read-Host "`nA restart is required to clear the Protection history. Enter y to restart now").ToLower()
-    if ($choice -eq "y") { Restart-Computer }
+  $choice = (Read-Host "`nA restart is required to clear the Protection history. Enter y to restart now").ToLower()
+  if ($choice -eq "y") { Restart-Computer }
 }
