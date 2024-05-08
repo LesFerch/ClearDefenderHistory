@@ -13,3 +13,6 @@ if (Test-Path $file) {
   $choice = (Read-Host "`nA restart is required to clear the Protection history. Enter y to restart now").ToLower()
   if ($choice -eq "y") { Restart-Computer }
 }
+else {
+  Read-Host "No Protection history (Detections.log) found. Press Enter to close"
+}
