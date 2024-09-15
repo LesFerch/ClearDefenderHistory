@@ -22,6 +22,10 @@ Some people may want to run this script just to clean things up and not see old 
 
 **Note**: Some antivirus software may falsely detect the download as a virus. This can happen any time you download a new script and may require extra steps to whitelist the file.
 
+### Clear Defender History on Every Restart
+
+If you wish to set up a task that clears Defender history on *every* restart, use the batch file **ClearDefenderHistoryEveryRestart.cmd**. If you are not already at an elevated Cmd prompt, you will need to right-click that batch file and select "Run as Administrator".
+
 \
 \
 [![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/ClearDefenderHistory)
