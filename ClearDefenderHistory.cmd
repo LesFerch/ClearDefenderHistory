@@ -17,12 +17,18 @@ $RemoveTask = $true
 $Scans = 'C:\ProgramData\Microsoft\Windows Defender\Scans'
 $Service = "$Scans\History\Service"
 $db = "$Scans\mpenginedb.db*"
+$TN = "DWDH"
 
-if ($ClearAV)    { $C1 = "rd /s /q \`"$Service\`" & " }
-if ($ClearCFA)   { $C2 = "del \`"$db\`" & " }
-if ($RemoveTask) { $C3 = "schtasks /delete /f /tn DWDH" }
+if ($ClearAV)    { $C1 = "rd /s /q `"$Service`" & " }
+if ($ClearCFA)   { $C2 = "del /f `"$db`" & " }
+if ($RemoveTask) { $C3 = "schtasks /delete /f /tn $TN" }
 
-schtasks /create /f /sc onStart /ru 'NT AUTHORITY\SYSTEM' /tn DWDH /tr "cmd.exe /c $C1$C2$C3"
+$TD = "Delete Windows Defender History"
+$TA = New-ScheduledTaskAction -Execute 'cmd.exe' -Argument "/c $C1$C2$C3"
+$TT = New-ScheduledTaskTrigger -AtStartup
+$TP = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccount
+$TS = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+Register-ScheduledTask -Force -Description $TD -Action $TA -Trigger $TT -Principal $TP -Settings $TS -TaskName $TN >$Null
 
 $choice = (Read-Host "`nA restart is required to clear the Protection history. Enter y to restart now").ToLower()
 if ($choice -eq "y") { Restart-Computer }
