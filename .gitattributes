@@ -1,4 +1,5 @@
 LICENSE export-ignore
+*.bat   export-ignore
 *.md    export-ignore
 .git*   export-ignore
 assets  export-ignore
