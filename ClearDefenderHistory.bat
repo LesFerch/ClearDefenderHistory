@@ -1,5 +1,7 @@
 ::This is an alternative script that does not use PowerShell.
 
+::Please use the other script (ClearDefenderHistory.cmd) unless PowerShell is disabled.
+
 ::Due to an schtasks limitation, the task created by this script requires the computer to be plugged in. If your computer is running from battery, it just means that the Protection history won't be cleared until the next restart while plugged in.
 
 ::Place this script in a convenient location, such as C:\Tools.
