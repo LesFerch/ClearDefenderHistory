@@ -4,7 +4,7 @@
 
 ## Clear Windows Defender History Files
 
-**ClearDefenderHistory.cmd** clears the Windows Defender "Protection history" by creating a scheduled task, configured to run as SYSTEM, that clears the Windows Defender log folder on next restart of the computer.
+**ClearDefenderHistory.cmd** clears the Windows Defender "Protection history" by creating a scheduled task, configured to run as SYSTEM, that clears the Windows Defender logs on next restart of the computer.
 
 **Note**: Previous versions of this script were able to clear the history without a restart. A change to Windows Defender security in the Spring of 2024 broke the previous method. Until a better method is found, a restart is now required.
 
