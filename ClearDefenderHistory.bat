@@ -23,5 +23,5 @@ if errorlevel 1 echo. & echo Please Run as adminstrator & echo. & pause & goto e
 
 echo.
 choice /m "Restart now to clear Defender history (y/n)?" /c YN /n
-if errorlevel 2 (Goto end) else (shutdown /r /t 0)
+if errorlevel 2 (goto end) else (shutdown /r /t 0)
 :end
