@@ -16,7 +16,7 @@
 ::Move the shortcut to a convenient location such as your Desktop.
 
 @echo off
-schtasks -create -f -sc onStart -ru "NT AUTHORITY\SYSTEM" -tn DWDH -tr "cmd /c cd /d 'C:\ProgramData\Microsoft\Windows Defender\Scans' & rd /s /q History\Service & del /f mpenginedb.db* & schtasks /delete /f /tn DWDH" >nul 2>nul
+schtasks -create -f -sc onStart -ru "NT AUTHORITY\SYSTEM" -tn DWDH -tr "cmd /c cd /d 'C:\ProgramData\Microsoft\Windows Defender' & rd /s /q Quarantine & cd Scans & rd /s /q History\Service & del /f mpenginedb.db* & schtasks /delete /f /tn DWDH" >nul 2>nul
 
 schtasks /query /tn DWDH >nul 2>nul
 if errorlevel 1 echo. & echo Please Run as adminstrator & echo. & pause & goto end
